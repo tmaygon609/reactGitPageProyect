@@ -22,10 +22,10 @@ function Public() {
     return (
         <div>
             <h1>Prácticas React</h1>
-            <Router>
+            <Router basename={process.env.PUBLIC_URL}>
                 <Menu />
                 <Routes>
-                    <Route path="/reactGitPageProyect/" element={<p></p>} />
+                    <Route path="/" element={<p></p>} />
                     <Route path="*" element={<NotFound />} />
                     <Route path="/practica1/" element={<RutasAnidadas />} >
                         <Route path="alicia" element={<Formulario></Formulario>} />
