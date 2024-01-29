@@ -25,7 +25,7 @@ function Public() {
             <Router>
                 <Menu />
                 <Routes>
-                    <Route path="/" element={<p></p>} />
+                    <Route path="/reactGitPageProyect/" element={<p></p>} />
                     <Route path="*" element={<NotFound />} />
                     <Route path="/practica1/" element={<RutasAnidadas />} >
                         <Route path="alicia" element={<Formulario></Formulario>} />
@@ -37,10 +37,10 @@ function Public() {
                     </Route>
                     <Route path="/practica2/" element={<RutasAnidadas />} >
                         <Route path="alicia" element={<Actualizacion />} />
-                        <Route path="adrian/triangulo" element={<Triangulo/>}/>
-                        <Route path="adrian/login" element={<Login/>}/>
-                        <Route path="adrian" element={<Navbar/>} />
-                        <Route path="carmen" element={<MiFormulario/>} />
+                        <Route path="adrian/triangulo" element={<Triangulo />} />
+                        <Route path="adrian/login" element={<Login />} />
+                        <Route path="adrian" element={<Navbar />} />
+                        <Route path="carmen" element={<MiFormulario />} />
                         <Route path="joseantonio" element={<FormularioNotas></FormularioNotas>} />
                         <Route path="pablo" element={<Eliminar />} />
                         <Route path="tibu" element={<RegistrarUsuarioForm></RegistrarUsuarioForm>} />
