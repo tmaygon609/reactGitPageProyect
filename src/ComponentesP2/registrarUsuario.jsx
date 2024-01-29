@@ -77,7 +77,7 @@ const RegistrarUsuarioForm = () => {
             </div>
 
             <div className="mb-3">
-              <label htmlFor="apellidos" className="form-label">Apellidos:</label>
+              <label htmlFor="apellidos" className="form-label">Hola:</label>
               <input
                 type="text"
                 id="apellidos"
