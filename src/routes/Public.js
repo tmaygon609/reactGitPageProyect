@@ -21,7 +21,6 @@ import MiFormulario from "../ComponentesP2/FormularioIngresoAlumno";
 function Public() {
     return (
         <div>
-            <h1>Prácticas React</h1>
             <Router basename={process.env.PUBLIC_URL}>
                 <Menu />
                 <Routes>
