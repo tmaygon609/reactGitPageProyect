@@ -1,24 +1,26 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, NavbarToggler, Collapse, Navbar } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Menu() {
     const [dropdownOpen1, setDropdownOpen1] = useState(false);
     const [dropdownOpen2, setDropdownOpen2] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     const toggleDropdown1 = () => setDropdownOpen1(!dropdownOpen1);
     const toggleDropdown2 = () => setDropdownOpen2(!dropdownOpen2);
+    const toggle = () => setIsOpen(!isOpen);
 
-    return ( 
-        <nav className="navbar navbar-expand-lg navbar-light bg-secondary-subtle sticky-top">
+    return (
+        <Navbar expand="lg" light className="bg-secondary-subtle" sticky="top">
             <div className="container-fluid">
                 <NavLink className="navbar-brand" to="/">
                     Inicio
                 </NavLink>
-                <div className="collapse navbar-collapse" id="navbarNav">
+                <NavbarToggler onClick={toggle} />
+                <Collapse isOpen={!isOpen} navbar>
                     <ul className="navbar-nav">
-
                         <li className="nav-item dropdown">
                             <Dropdown isOpen={dropdownOpen1} toggle={toggleDropdown1}>
                                 <DropdownToggle nav caret>
@@ -59,9 +61,9 @@ function Menu() {
                             </Dropdown>
                         </li>
                     </ul>
-                </div>
+                </Collapse>
             </div>
-        </nav>
+        </Navbar>
     );
 }
 
